@@ -22,9 +22,6 @@ import {
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
-import porkaGif from './porka.gif'
-import leftImage from './left.png'
-import rightImage from './rigth.png'
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -44,7 +41,7 @@ const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
 const connection = new anchor.web3.Connection(rpcHost);
 
 const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
-
+console.log(startDateSeed)
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
 const theme = createTheme({
