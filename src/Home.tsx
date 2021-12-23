@@ -192,12 +192,12 @@ const Home = (props: HomeProps) => {
             </div>
             {wallet && <div style={{ width: '350px', height: '5px', background: '#E9AC0E', marginTop: '60px' }} />}
 
-            <MintContainer>
+            <MintContainer style={{ display: 'flex', justifyContent: 'center' }}>
               {!wallet ? (
                 <ConnectButton>Connect Wallet</ConnectButton>
               ) : (
                 <MintButton
-                  style={{ justifyContent: 'center', fontSize: '28px', position: 'absolute', width: '300px', background: '#E22AFE', fontWeight: 'bold', left: '260px', marginTop: '80px' }}
+                  style={{ justifyContent: 'center', fontSize: '28px', width: '250px', background: '#E22AFE', fontWeight: 'bold', marginTop: '30px' }}
                   disabled={isSoldOut || isMinting || !isActive}
                   onClick={onMint}
                   variant="outlined"
